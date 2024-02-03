@@ -1,0 +1,35 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: Node.js CI
+
+on:
+  push:
+    branches: [ "main" ]
+  
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      # - name: Clone repository
+      #   uses: actions/checkout@v2
+      # - name: Use Node.js 18.x
+      #   uses: actions/setup-node@v1
+      #   with:
+      #     node-version: 18.x
+      # - name: pwd
+      #   working-directory: /home/dung/Project/tpsecurity/security-landing-page
+      #   run: pwd
+      # - name: Install dependencies
+      #   run: npm install    
+      - name: Go to server
+        working-directory: /home/dung/Project/tpsecurity
+        run: ssh -i "tpsecurity.pem" ubuntu@ec2-13-213-60-120.ap-southeast-1.compute.amazonaws.com
+      - name: Go to code folder 
+        run: cd BE/security-management-api
+      - name: Pull newest code
+        run: git pull
+      - name: Install package
+        run: npm i
+      - name: Start application
+        run: npm start
