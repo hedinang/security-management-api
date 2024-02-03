@@ -5,5 +5,6 @@ module.exports = [
     { '/sale': './routers/saleController' },
     { '/click': './routers/clickController' },
     { '/author': './routers/authorController' },
-    { '/dashboard': './routers/dashboardController' }
+    { '/dashboard': './routers/dashboardController' },
+    { '/applicant': './routers/applicantController' }
 ]

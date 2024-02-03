@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const { v4: uuidv4 } = require('uuid');
 
-const modelName = 'user';
+const modelName = 'applicant';
 
 const userSchema = new Schema({
     id: {
@@ -13,16 +13,23 @@ const userSchema = new Schema({
     },
     image: String,
     name: String,
-    email: String,
-    username: String,
-    password: String,
+    year_of_birth: Number,
+    gender: String,
     phone: String,
-    role: String,
-    access_token: String,
-    status: {
+    position: String,
+    location: String,
+    working_time: String,
+    wage: {
+        type: Number,
+        index: true,
+    },
+    support: {
         type: String,
         index: true,
-        default: 'ACTIVE'
+    },
+    message: {
+        type: String,
+        index: true,
     },
     created_at: {
         type: String,
