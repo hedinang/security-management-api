@@ -8,5 +8,6 @@ module.exports = [
     { '/dashboard': './routers/dashboardController' },
     { '/applicant': './routers/applicantController' },
     { '/requirement': './routers/requirementController' },
-    { '/service': './routers/serviceController' }
+    { '/service': './routers/serviceController' },
+    { '/social': './routers/socialController' }
 ]

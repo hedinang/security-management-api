@@ -100,6 +100,6 @@ db.Click = require('./click');
 db.Applicant = require('./applicant');
 db.Requirement = require('./requirement');
 db.Service = require('./service');
-
+db.Social = require('./social');
 
 module.exports = db;
