@@ -6,5 +6,7 @@ module.exports = [
     { '/click': './routers/clickController' },
     { '/author': './routers/authorController' },
     { '/dashboard': './routers/dashboardController' },
-    { '/applicant': './routers/applicantController' }
+    { '/applicant': './routers/applicantController' },
+    { '/requirement': './routers/requirementController' },
+    { '/service': './routers/serviceController' }
 ]

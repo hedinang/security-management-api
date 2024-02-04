@@ -98,6 +98,8 @@ db.Song = require('./song');
 db.Sale = require('./sale');
 db.Click = require('./click');
 db.Applicant = require('./applicant');
+db.Requirement = require('./requirement');
+db.Service = require('./service');
 
 
 module.exports = db;

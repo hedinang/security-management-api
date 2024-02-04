@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const { v4: uuidv4 } = require('uuid');
-const modelName = 'song';
 
-const songSchema = new Schema({
+const modelName = 'service';
+
+const serviceSchema = new Schema({
     id: {
         type: String,
         required: true,
@@ -27,6 +28,6 @@ const songSchema = new Schema({
         default: new Date()
     },
 }, { versionKey: false });
-const ApiSchema = mongoose.model(modelName, songSchema, modelName);
+const ApiSchema = mongoose.model(modelName, serviceSchema, modelName);
 
 module.exports = ApiSchema;
